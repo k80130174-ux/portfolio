@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boxy Silhouette Coat | URBAN CLOSET</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">URBAN CLOSET</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="collections.html">COLLECTIONS</a></li>
+          <li><a href="lookbook.html">LOOKBOOK</a></li>
+          <li><a href="brand-story.html">STORY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
+        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <div class="container">
+      <div class="breadcrumb fade-in">
+        <a href="index.html">Home</a> / <a href="collections.html">Outerwear</a> / Boxy Silhouette Coat
+      </div>
+
+      <div class="product-detail-layout">
+        <!-- Image Gallery -->
+        <div class="product-images fade-in">
+          <div class="main-image">
+            <img id="current-img" src="https://images.unsplash.com/photo-1539106602050-86310df66b0a?q=80&w=2070&auto=format&fit=crop" alt="Boxy Silhouette Coat">
+          </div>
+          <div class="thumbnail-list">
+            <img class="thumb active" src="https://images.unsplash.com/photo-1539106602050-86310df66b0a?q=80&w=2070&auto=format&fit=crop" onclick="changeImage(this.src)">
+            <img class="thumb" src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=1974&auto=format&fit=crop" onclick="changeImage(this.src)">
+            <img class="thumb" src="https://images.unsplash.com/photo-1554523912-38e21950c40e?q=80&w=1974&auto=format&fit=crop" onclick="changeImage(this.src)">
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-selection fade-in">
+          <div class="product-meta">
+            <h1 class="typography-en">Boxy Silhouette Coat</h1>
+            <p class="price">¥42,000 <span style="font-size: 12px; color: var(--color-gray);">(tax incl.)</span></p>
+          </div>
+
+          <div class="line-thin" style="margin: 30px 0;"></div>
+
+          <div class="selection-group">
+            <label>Size</label>
+            <div class="size-selector">
+              <div class="size-option" onclick="selectSize(this)">S</div>
+              <div class="size-option" onclick="selectSize(this)">M</div>
+              <div class="size-option active" onclick="selectSize(this)">L</div>
+              <div class="size-option" onclick="selectSize(this)">XL</div>
+            </div>
+          </div>
+
+          <div class="spacer-md"></div>
+
+          <button class="btn" style="width: 100%;">ADD TO CART</button>
+
+          <div class="spacer-lg"></div>
+
+          <div class="product-description">
+            <h4>Description</h4>
+            <p>
+              都会的で洗練されたオーバーサイズシルエットのコート。ジェンダーレスに着用いただけるよう、肩のラインを落としたドロップショルダーと、立体的な袖のパターンを採用しました。上質なウールメルトン素材を使用し、軽量ながらも高い保温性を実現しています。
+            </p>
+            <div class="spacer-md"></div>
+            <ul>
+              <li>・Material: Wool 100%</li>
+              <li>・Color: Charcoal Black</li>
+              <li>・Model: 182cm (L size) / 165cm (S size)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation Section -->
+      <section class="section-padding">
+        <h2 class="typography-en fade-in" style="margin-bottom: 40px;">You May Also Like</h2>
+        <div class="product-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="product-card fade-in">
+            <a href="#">
+              <div class="product-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=2070&auto=format&fit=crop">
+              </div>
+              <div class="product-info">
+                <h3>Minimalist Knit Sweater</h3>
+                <p>¥18,000</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-card fade-in">
+            <a href="#">
+              <div class="product-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1976&auto=format&fit=crop">
+              </div>
+              <div class="product-info">
+                <h3>Wide Tapered Trousers</h3>
+                <p>¥24,000</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-card fade-in">
+            <a href="#">
+              <div class="product-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=2072&auto=format&fit=crop">
+              </div>
+              <div class="product-info">
+                <h3>Unisex Denim Jacket</h3>
+                <p>¥28,000</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-card fade-in">
+            <a href="#">
+              <div class="product-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1974&auto=format&fit=crop">
+              </div>
+              <div class="product-info">
+                <h3>Oversized Hoodie</h3>
+                <p>¥22,000</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        &copy; 2026 URBAN CLOSET. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function changeImage(src) {
+      document.getElementById('current-img').src = src;
+      document.querySelectorAll('.thumb').forEach(thumb => {
+        thumb.classList.remove('active');
+        if(thumb.src === src) thumb.classList.add('active');
+      });
+    }
+
+    function selectSize(el) {
+      document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+  <style>
+    .breadcrumb {
+      font-size: 11px;
+      color: var(--color-gray);
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .product-detail-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+    }
+
+    .main-image {
+      aspect-ratio: 3 / 4;
+      background-color: var(--color-light-gray);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumbnail-list {
+      display: flex;
+      gap: 15px;
+    }
+
+    .thumb {
+      width: 80px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+
+    .thumb.active, .thumb:hover {
+      opacity: 1;
+      border-color: var(--color-black);
+    }
+
+    .product-meta h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+    .selection-group label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 15px;
+      color: var(--color-gray);
+    }
+
+    .size-selector {
+      display: flex;
+      gap: 10px;
+    }
+
+    .size-option {
+      width: 50px;
+      height: 50px;
+      border: 1px solid var(--color-border);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .size-option.active {
+      border-color: var(--color-black);
+      background-color: var(--color-black);
+      color: var(--color-white);
+    }
+
+    .product-description h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 0.1em;
+    }
+
+    .product-description p, .product-description li {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    .product-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .product-detail-layout { grid-template-columns: 1fr; gap: 40px; }
+      .product-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+  </style>
+
+</body>
+</html>

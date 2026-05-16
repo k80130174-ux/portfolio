@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lookbook | URBAN CLOSET</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">URBAN CLOSET</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="collections.html">COLLECTIONS</a></li>
+          <li><a href="lookbook.html" style="font-weight: 400;">LOOKBOOK</a></li>
+          <li><a href="brand-story.html">STORY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
+        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <div class="container">
+      <div class="fade-in" style="text-align: center; margin-bottom: 80px;">
+        <h1 class="typography-en">Lookbook '26 Vol.1</h1>
+        <p style="font-size: 12px; color: var(--color-gray); margin-top: 10px; letter-spacing: 0.2em;">BEYOND THE GENDER</p>
+      </div>
+
+      <div class="lookbook-gallery">
+        <div class="look-item fade-in">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2040&auto=format&fit=crop">
+        </div>
+        <div class="look-item fade-in">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop">
+        </div>
+        <div class="look-item fade-in span-2">
+          <img src="https://images.unsplash.com/photo-1496360166961-10a51d5f367a?q=80&w=1974&auto=format&fit=crop">
+        </div>
+        <div class="look-item fade-in">
+          <img src="https://images.unsplash.com/photo-1539106602050-86310df66b0a?q=80&w=2070&auto=format&fit=crop">
+        </div>
+        <div class="look-item fade-in">
+          <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=2070&auto=format&fit=crop">
+        </div>
+        <div class="look-item fade-in">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1976&auto=format&fit=crop">
+        </div>
+        <div class="look-item fade-in">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=2072&auto=format&fit=crop">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="spacer-lg"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        &copy; 2026 URBAN CLOSET. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+  <style>
+    .lookbook-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .look-item {
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      background-color: var(--color-light-gray);
+    }
+
+    .look-item.span-2 {
+      grid-column: span 2;
+      aspect-ratio: 16 / 9;
+    }
+
+    .look-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s var(--transition);
+    }
+
+    .look-item:hover img {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .lookbook-gallery { grid-template-columns: 1fr 1fr; }
+      .look-item.span-2 { grid-column: span 2; }
+    }
+  </style>
+
+</body>
+</html>

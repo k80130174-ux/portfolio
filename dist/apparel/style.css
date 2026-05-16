@@ -1,0 +1,202 @@
+/* 
+  URBAN CLOSET - Design System
+  Brand Director: Watanabe Eri
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Noto+Sans+JP:wght@100;300;400&display=swap');
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #0A0A0A;
+  --color-gray: #6B7280;
+  --color-light-gray: #F9FAFB;
+  --color-border: #E5E7EB;
+  
+  --font-en: 'Inter', sans-serif;
+  --font-jp: 'Noto Sans JP', sans-serif;
+  
+  --container-width: 1200px;
+  --header-height: 80px;
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-jp);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, .typography-en {
+  font-family: var(--font-en);
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Layout */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+/* Components */
+.btn {
+  display: inline-block;
+  padding: 16px 48px;
+  border: 1px solid var(--color-black);
+  background: transparent;
+  color: var(--color-black);
+  font-family: var(--font-en);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.line-thin {
+  height: 1px;
+  background-color: var(--color-border);
+  border: none;
+}
+
+/* Header */
+header {
+  height: var(--header-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+}
+
+header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 0.3em;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  font-size: 12px;
+  font-family: var(--font-en);
+  letter-spacing: 0.1em;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 80px 0 40px;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-logo {
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+}
+
+.footer-links h4 {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--color-gray);
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid var(--color-black);
+  font-family: var(--font-jp);
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 11px;
+  color: var(--color-gray);
+  letter-spacing: 0.1em;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s var(--transition), transform 1s var(--transition);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Utilities */
+.spacer-sm { height: 20px; }
+.spacer-md { height: 40px; }
+.spacer-lg { height: 80px; }

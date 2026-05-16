@@ -1,0 +1,417 @@
+/* =========================================
+   Base & Reset
+   ========================================= */
+:root {
+    --color-bg: #FCF8F2; /* Cream */
+    --color-bg-alt: #FFF0EE; /* Pink beige */
+    --color-text: #5C4B47; /* Warm dark brown */
+    --color-accent: #E8C8C0; /* Dusty Pink */
+    --color-white: #FFFFFF;
+    
+    --font-jp: 'Zen Maru Gothic', sans-serif;
+    --font-en: 'Outfit', sans-serif;
+    
+    --radius-round: 24px;
+    --radius-card: 32px;
+    
+    --shadow-soft: 0 10px 30px rgba(92, 75, 71, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-jp);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-family: var(--font-en);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* =========================================
+   Header
+   ========================================= */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-en);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    font-family: var(--font-en);
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================
+   Hero
+   ========================================= */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; /* 画像を透明にせずくっきり表示 */
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* 写真の上に優しい白のフィルターを濃いめにかけて、文字をくっきり見せます */
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    background: transparent; /* 背景をなくしてクリアに */
+    padding: 50px 60px;
+    border-radius: var(--radius-card);
+    text-align: center;
+    box-shadow: none; /* 枠の影も削除 */
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.hero-subtitle {
+    font-family: var(--font-en);
+    font-size: 1.1rem;
+    color: var(--color-text); /* 白や明るい背景でも読めるように濃い色へ変更 */
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8); /* 見やすくするための白いふんわりシャドウ */
+}
+
+.catchphrase {
+    font-size: 1.8rem;
+    font-weight: 700; /* 少し太くして視認性アップ */
+    line-height: 1.8;
+    color: var(--color-text);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.5); /* こちらも同様に白浮きシャドウを追加 */
+}
+
+/* =========================================
+   Concept
+   ========================================= */
+.concept {
+    position: relative;
+    background-color: var(--color-bg-alt);
+    text-align: center;
+    overflow: hidden;
+}
+
+.concept-inner {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    margin: 0 auto;
+    background: transparent; /* 背景の白いボックスをなくしてクリアに */
+    padding: 40px 20px;
+    border-radius: var(--radius-card);
+    box-shadow: none; /* 影を消す */
+}
+
+.concept-text {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+.concept-text:last-child {
+    margin-bottom: 0;
+}
+
+.bg-shape {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: var(--color-accent);
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* =========================================
+   Menu
+   ========================================= */
+.menu {
+    background-color: var(--color-white);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.menu-card {
+    background: var(--color-bg);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(92, 75, 71, 0.1);
+}
+
+.menu-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-img img {
+    transform: scale(1.05);
+}
+
+.menu-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.menu-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.menu-desc {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #796662;
+}
+
+.menu-price {
+    font-family: var(--font-en);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* =========================================
+   Access
+   ========================================= */
+.access {
+    background-color: var(--color-bg-alt);
+}
+
+.access-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: var(--color-white);
+    padding: 50px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+}
+
+.logo-small {
+    font-family: var(--font-en);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--color-text);
+}
+
+.info-list {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 15px 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.info-list dt {
+    font-family: var(--font-en);
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+.access-note {
+    font-size: 0.95rem;
+    color: #796662;
+    text-align: left;
+}
+
+.access-map iframe {
+    transition: opacity 0.3s ease;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+.footer {
+    background-color: var(--color-text);
+    color: var(--color-white);
+    padding: 60px 0 30px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: var(--font-en);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+.sns-links {
+    margin-bottom: 30px;
+}
+
+.sns-links a {
+    font-family: var(--font-en);
+    letter-spacing: 0.1em;
+}
+
+.copyright {
+    font-family: var(--font-en);
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .section { padding: 60px 0; }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-content {
+        padding: 30px 20px;
+        width: 90%;
+    }
+    
+    .catchphrase {
+        font-size: 1.3rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .access-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 30px;
+    }
+}

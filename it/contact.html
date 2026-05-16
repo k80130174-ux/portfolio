@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | SaaS-TECH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">SaaS-TECH</a>
+            <nav class="nav-links">
+                <a href="index.html">トップ</a>
+                <a href="service.html">サービス</a>
+                <a href="company.html">会社概要</a>
+                <a href="recruit.html">採用情報</a>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">お問い合わせ</a>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">お問い合わせ</h1>
+                <p class="section-subtitle">製品の導入、パートナーシップ、メディア取材など、お気軽にお問い合わせください。</p>
+                
+                <form class="contact-form" style="max-width: 600px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--color-border); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 500;">お名前</label>
+                        <input type="text" placeholder="例：山田 太郎" style="width: 100%; padding: 12px; border: 1px solid var(--color-border); border-radius: 6px;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 500;">メールアドレス</label>
+                        <input type="email" placeholder="example@saas-tech.com" style="width: 100%; padding: 12px; border: 1px solid var(--color-border); border-radius: 6px;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 500;">会社名</label>
+                        <input type="text" placeholder="株式会社〇〇" style="width: 100%; padding: 12px; border: 1px solid var(--color-border); border-radius: 6px;">
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 500;">お問い合わせ内容</label>
+                        <textarea rows="6" placeholder="お問い合わせ内容をご記入ください" style="width: 100%; padding: 12px; border: 1px solid var(--color-border); border-radius: 6px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">内容を確認して送信する</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 SaaS-TECH Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
